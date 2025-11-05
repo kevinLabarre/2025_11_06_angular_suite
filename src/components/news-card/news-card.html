@@ -1,0 +1,19 @@
+<div class="card bg-base-100 w-96 shadow-sm border">
+  <figure class="h-48">
+    <img [src]="news.image" [alt]="news.titre" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title h-24 overflow-hidden">
+      {{news.titre}}
+
+    </h2>
+    <div class="badge badge-secondary">{{news.categorie}}</div>
+    <p class="h-24 overflow-hidden">{{news.texte}}</p>
+    <div class="card-actions justify-end">
+      <div class="badge badge-outline">{{news.datePublication | date: 'fullDate'}}</div>
+      @if(news.dateModification){
+      <div class="badge badge-outline">{{news.dateModification | date: 'fullDate'}}</div>
+      }
+    </div>
+  </div>
+</div>

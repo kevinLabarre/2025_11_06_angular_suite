@@ -1,0 +1,24 @@
+<div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id utilisateur</th>
+        <th>N° de compte</th>
+        <th>Type</th>
+        <th>Solde</th>
+        <th>Date de dernière transaction</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(account of accounts; track account.id) {
+      <tr>
+        <th>{{account.userId}}</th>
+        <th>{{account.accountNumber}}</th>
+        <th>{{account.accountType}}</th>
+        <th>{{account.solde}}</th>
+        <th>{{account.lastTransactionDate}}</th>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
