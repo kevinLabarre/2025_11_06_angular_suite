@@ -19,7 +19,12 @@
         <th>{{account.solde}}</th>
         <th>{{account.lastTransactionDate}}</th>
         <th>
-          <button (click)="handleDelete(account.id)" class="btn btn-error">Supprimer</button>
+          <!--
+          <button class="btn btn-primary" [routerLink]="`/comptes-bancaire/${account.id}`">Voir plus</button>
+        -->
+          <button class="btn btn-primary mx-2" [routerLink]="['/comptes-bancaire', account.id]">Voir plus</button>
+          <button class="btn btn-primary mx-2" (click)="handleRedirectDetails(account.id)">Voir plus</button>
+          <button (click)="handleDelete(account.id)" class="mx-2 btn btn-error">Supprimer</button>
         </th>
       </tr>
       }

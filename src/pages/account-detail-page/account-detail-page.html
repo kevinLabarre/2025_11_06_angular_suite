@@ -1,0 +1,18 @@
+<section class="m-5 p-5">
+  <p>Id récupéré : {{id}}</p>
+
+  <h1>Détail du compte</h1>
+
+  @if(account){
+  <ul class="border w-fit p-2">
+    <li>N° de compte: {{account.accountNumber}}</li>
+    <li>Type de compte: {{account.accountType}}</li>
+    <li>Solde: {{account.solde}}</li>
+    <li>Date de derniere transaction: {{account.lastTransactionDate}}</li>
+  </ul>
+  } @else {
+  <div class="skeleton h-40 w-128"></div>
+  }
+
+
+</section>

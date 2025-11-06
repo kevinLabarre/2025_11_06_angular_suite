@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { delay, Observable } from 'rxjs';
 import { IAccount } from '../../interfaces/IAccount';
 
 @Injectable({
@@ -21,6 +21,12 @@ export class AccountService {
 
   deleteOneAccount(accountId: string): Observable<IAccount> {
     return this.http.delete<IAccount>(`${this.baseUrl}/${accountId}`)
+  }
+
+  getAccountById(accountId: string): Observable<IAccount> {
+    return this.http.get<IAccount>(`${this.baseUrl}/${accountId}`).pipe(
+      delay(2000)
+    )
   }
 
 }
