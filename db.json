@@ -106,6 +106,13 @@
       "accountType": "EPARGNE",
       "solde": 15000,
       "lastTransactionDate": "2025-11-06T09:45:14.452Z"
+    },
+    {
+      "id": "a692",
+      "accountNumber": "T",
+      "accountType": "EPARGNE",
+      "solde": 23,
+      "lastTransactionDate": "2025-11-06T13:02:30.254Z"
     }
   ],
   "actualites": [

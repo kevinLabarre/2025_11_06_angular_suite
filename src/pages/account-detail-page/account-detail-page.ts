@@ -22,12 +22,19 @@ export class AccountDetailPage implements OnInit {
 
   id: string = ""
   account?: IAccount
+  error?: string;
+
 
   loadAccount(): void {
+    this.error = undefined
+
     if (this.id !== "")
       this.service.getAccountById(this.id).subscribe({
         next: resp => this.account = resp,
-        error: err => console.error("erreur de chargement du compte", err)
+        error: err => {
+          console.error("erreur de chargement du compte", err.message)
+          this.error = err.message
+        }
       })
   }
 

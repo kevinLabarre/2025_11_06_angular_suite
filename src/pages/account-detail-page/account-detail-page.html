@@ -10,7 +10,11 @@
     <li>Solde: {{account.solde}}</li>
     <li>Date de derniere transaction: {{account.lastTransactionDate}}</li>
   </ul>
-  } @else {
+  }
+  @else if(error){
+  <p>Une erreur est survenue. (message d'erreur du backEnd : {{error}}) </p>
+  }
+  @else {
   <div class="skeleton h-40 w-128"></div>
   }
 

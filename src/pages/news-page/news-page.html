@@ -1,0 +1,19 @@
+<section class="m-5 p-5">
+  <h1>Nos Actualités</h1>
+
+  @if(responseApi){
+  <div class="shadow-sm border m-5 p-5 grid grid-cols-3 gap-5">
+    @for(news of responseApi.data ; track news.id) {
+    <app-news-card [news]="news" />
+    }
+  </div>
+
+  <div class="w-fit m-auto">
+    <button (click)="handlePrev()" class="btn mr-2">Précédent</button>
+    <span>{{paginationInfo}}</span>
+    <button (click)="handleNext()" class="btn ml-2">Suivant</button>
+  </div>
+  }
+
+
+</section>

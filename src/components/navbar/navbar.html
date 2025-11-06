@@ -2,11 +2,14 @@
   <div class="container mx-auto">
     <nav class="navbar" aria-label="Navigation principale">
       <div class="navbar-start ml-5">
-        <a routerLink="" class="text-xl font-semibold cursor-pointer mr-5 hover:underline"
-          aria-label="Accueil">Accueil</a>
-        <a routerLink="comptes-bancaire" class="text-xl font-semibold cursor-pointer mr-5 hover:underline"
-          aria-label="Compte bancaire">Compte
+        <a routerLink="" routerLinkActive="active underline text-2xl" [routerLinkActiveOptions]="{ exact: true}"
+          class="text-xl font-semibold cursor-pointer mr-5 hover:underline" aria-label="Accueil">Accueil</a>
+        <a routerLink="comptes-bancaire" routerLinkActive="active underline text-2xl"
+          class="text-xl font-semibold cursor-pointer mr-5 hover:underline" aria-label="Compte bancaire">Compte
           bancaire</a>
+        <a routerLink="actualites" routerLinkActive="active underline text-2xl"
+          class="text-xl font-semibold cursor-pointer mr-5 hover:underline" aria-label="Nos actualités">Nos
+          actualités</a>
       </div>
       <div class="navbar-center">
         <!-- Contenu central si nécessaire -->
