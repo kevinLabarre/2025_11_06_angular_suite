@@ -1,5 +1,6 @@
 <div>
   @for(nbrButton of paginationArray ; track nbrButton){
-  <button (click)="handleClick(nbrButton)" class="btn mx-2">{{nbrButton}}</button>
+  <button [disabled]="buttonDisabledNbr === nbrButton" (click)="handleClick(nbrButton)"
+    class="btn mx-2">{{nbrButton}}</button>
   }
 </div>

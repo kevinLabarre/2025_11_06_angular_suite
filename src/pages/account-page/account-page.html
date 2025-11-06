@@ -1,16 +1,12 @@
 <section class="m-5 p-5">
-  <h1>Comptes bancaire</h1>
 
-  <app-account-list [accounts]="accountsList" />
+  <h1>Nos comptes bancaires</h1>
 
-  <div class="w-fit m-auto mt-5 p-5 border radius">
-    <input type="checkbox" class="checkbox" [(ngModel)]="displayForm" />
-    <span class="ml-2">Ajouter un produit</span>
-
-    @if(displayForm){
-    <app-add-account (accountAdded)="handleAddOneAccount($event)" />
-    }
-  </div>
-
+  <ul class="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
+    <li><a [routerLink]="['ajouter']" routerLinkActive="menu-active">Ajouter</a></li>
+    <li><a [routerLink]="['modifier']" routerLinkActive="menu-active">Modifier</a></li>
+    <li><a [routerLink]="['détails']" routerLinkActive="menu-active">Détails</a></li>
+  </ul>
+  <router-outlet />
 
 </section>

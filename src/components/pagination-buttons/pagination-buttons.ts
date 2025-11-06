@@ -9,6 +9,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class PaginationButtons implements OnInit {
 
   @Input({ required: true }) nbrButtons!: number
+  @Input() buttonDisabledNbr: number = 0 // numéro du bouton à désactiver
   @Output() pagedChanged = new EventEmitter<number>
 
   // si nbrButtons est égal à 4, paginationArray sera égale à [1,2,3,4]

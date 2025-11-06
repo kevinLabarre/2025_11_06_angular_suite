@@ -1,0 +1,14 @@
+<section class="m-5 p-5">
+  <app-account-list [accounts]="accountsList" />
+
+  <div class="w-fit m-auto mt-5 p-5 border radius">
+    <input type="checkbox" class="checkbox" [(ngModel)]="displayForm" />
+    <span class="ml-2">Ajouter un produit</span>
+
+    @if(displayForm){
+    <app-add-account (accountAdded)="handleAddOneAccount($event)" />
+    }
+  </div>
+
+
+</section>

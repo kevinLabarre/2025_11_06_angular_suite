@@ -9,13 +9,14 @@
   </div>
 
   <div class="w-fit m-auto">
-    <button (click)="handlePrev()" class="btn mr-2">Précédent</button>
+    <button [disabled]="responseApi.prev === null" (click)="handlePrev()" class="btn mr-2">Précédent</button>
     <span>{{paginationInfo}}</span>
-    <button (click)="handleNext()" class="btn ml-2">Suivant</button>
+    <button [disabled]="responseApi.next === null" (click)="handleNext()" class="btn ml-2">Suivant</button>
   </div>
 
   <div class="w-fit m-auto">
-    <app-pagination-buttons [nbrButtons]="responseApi.pages" (pagedChanged)="handleClickOnPaginationButton($event)" />
+    <app-pagination-buttons [nbrButtons]="responseApi.pages" [buttonDisabledNbr]="pageNbr"
+      (pagedChanged)="handleClickOnPaginationButton($event)" />
   </div>
   }
 

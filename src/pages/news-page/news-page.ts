@@ -15,8 +15,8 @@ export class NewsPage {
   constructor(private NewsService: NewsService) { }
 
   nbrNewsPerPage = 6;
-
   responseApi?: IResponsePaginate<INews>
+
 
   ngOnInit(): void {
     this.loadProduct(1, this.nbrNewsPerPage)
@@ -45,11 +45,16 @@ export class NewsPage {
         this.loadProduct(this.responseApi.next, this.nbrNewsPerPage)
   }
 
+  get pageNbr(): number {
+    if (this.responseApi) {
+      return this.responseApi.next ? this.responseApi.next - 1 : this.responseApi.prev + 1
+    } return 0
+  }
+
   get paginationInfo(): string {
     let result = ''
     if (this.responseApi) {
-      const nbrPage = this.responseApi.next ? this.responseApi.next - 1 : this.responseApi.prev + 1
-      result = `${nbrPage} / ${this.responseApi.pages}`
+      result = `${this.pageNbr} / ${this.responseApi.pages}`
     }
     return result
   }
