@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../../services/account/account-service';
 import { IAccount } from '../../interfaces/IAccount';
 import { AccountList } from "../../components/account-list/account-list";
+import { AddAccount } from "../../app/add-account/add-account";
 
 @Component({
   selector: 'app-account-page',
-  imports: [AccountList],
+  imports: [AccountList, AddAccount],
   templateUrl: './account-page.html',
   styleUrl: './account-page.css',
 })
@@ -26,6 +27,9 @@ export class AccountPage implements OnInit {
     })
   }
 
-
+  handleAddOneAccount(account: IAccount) {
+    console.log("reçu chez le parent: ", account)
+    this.accountsList.push(account)
+  }
 
 }

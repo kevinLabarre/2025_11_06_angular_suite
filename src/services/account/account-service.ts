@@ -15,4 +15,12 @@ export class AccountService {
     return this.http.get<IAccount[]>(this.baseUrl)
   }
 
+  addOneAccount(newAccount: IAccount): Observable<IAccount> {
+    return this.http.post<IAccount>(this.baseUrl, newAccount)
+  }
+
+  deleteOneAccount(accountId: string): Observable<IAccount> {
+    return this.http.delete<IAccount>(`${this.baseUrl}/${accountId}`)
+  }
+
 }

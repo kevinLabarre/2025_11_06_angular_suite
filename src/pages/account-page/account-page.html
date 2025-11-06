@@ -3,4 +3,6 @@
 
   <app-account-list [accounts]="accountsList" />
 
+  <app-add-account (accountAdded)="handleAddOneAccount($event)" />
+
 </section>

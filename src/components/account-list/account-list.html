@@ -7,6 +7,7 @@
         <th>Type</th>
         <th>Solde</th>
         <th>Date de dernière transaction</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -17,6 +18,9 @@
         <th>{{account.accountType}}</th>
         <th>{{account.solde}}</th>
         <th>{{account.lastTransactionDate}}</th>
+        <th>
+          <button (click)="handleDelete(account.id)" class="btn btn-error">Supprimer</button>
+        </th>
       </tr>
       }
     </tbody>

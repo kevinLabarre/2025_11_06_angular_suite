@@ -71,6 +71,41 @@
       "accountNumber": "FR7611808009101234567890178",
       "accountType": "COURANT",
       "lastTransactionDate": "2023-05-01T10:42:18.000Z"
+    },
+    {
+      "id": "ac29",
+      "accountNumber": "FR7611808009101234567890179",
+      "accountType": "COURANT",
+      "solde": 153,
+      "lastTransactionDate": "2025-11-06T08:53:19.358Z"
+    },
+    {
+      "id": "f8e7",
+      "accountNumber": "FR156151",
+      "accountType": "EPARGNE",
+      "solde": 150,
+      "lastTransactionDate": "2025-11-06T09:43:50.834Z"
+    },
+    {
+      "id": "17f4",
+      "accountNumber": "Test",
+      "accountType": "EPARGNE",
+      "solde": 15000,
+      "lastTransactionDate": "2025-11-06T09:44:55.581Z"
+    },
+    {
+      "id": "c7b8",
+      "accountNumber": "FR156156181865156",
+      "accountType": "EPARGNE",
+      "solde": 15000,
+      "lastTransactionDate": "2025-11-06T09:45:09.440Z"
+    },
+    {
+      "id": "8867",
+      "accountNumber": "FR156156181865156",
+      "accountType": "EPARGNE",
+      "solde": 15000,
+      "lastTransactionDate": "2025-11-06T09:45:14.452Z"
     }
   ],
   "actualites": [
