@@ -3,10 +3,11 @@ import { NewsService } from '../../services/news/news-service';
 import { INews } from '../../interfaces/INews';
 import { IResponsePaginate } from '../../interfaces/IResponsePaginate';
 import { NewsCard } from "../../components/news-card/news-card";
+import { PaginationButtons } from "../../components/pagination-buttons/pagination-buttons";
 
 @Component({
   selector: 'app-news-page',
-  imports: [NewsCard],
+  imports: [NewsCard, PaginationButtons],
   templateUrl: './news-page.html',
   styleUrl: './news-page.css',
 })
@@ -51,6 +52,11 @@ export class NewsPage {
       result = `${nbrPage} / ${this.responseApi.pages}`
     }
     return result
+  }
+
+  handleClickOnPaginationButton(pageNbr: number): void {
+    if (this.responseApi)
+      this.loadProduct(pageNbr, this.nbrNewsPerPage)
   }
 
 }

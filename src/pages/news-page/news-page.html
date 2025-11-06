@@ -13,7 +13,10 @@
     <span>{{paginationInfo}}</span>
     <button (click)="handleNext()" class="btn ml-2">Suivant</button>
   </div>
-  }
 
+  <div class="w-fit m-auto">
+    <app-pagination-buttons [nbrButtons]="responseApi.pages" (pagedChanged)="handleClickOnPaginationButton($event)" />
+  </div>
+  }
 
 </section>
