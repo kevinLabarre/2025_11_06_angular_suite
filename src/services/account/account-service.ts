@@ -29,4 +29,12 @@ export class AccountService {
     )
   }
 
+  updateOneAccount(account: IAccount): Observable<IAccount> {
+    console.log("account", account)
+
+    if (account.id && account.id !== "")
+      return this.http.put<IAccount>(`${this.baseUrl}/${account.id}`, account)
+    else throw new Error("Id requis pour les mise à jour de compte")
+  }
+
 }

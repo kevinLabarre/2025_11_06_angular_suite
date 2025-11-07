@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../../../services/account/account-service';
 import { IAccount } from '../../../interfaces/IAccount';
 import { AccountList } from "../../account-list/account-list";
-import { AddAccount } from "../../../app/add-account/add-account";
+import { AddAccount } from "../../add-account/add-account";
 import { FormsModule } from '@angular/forms';
 
 @Component({

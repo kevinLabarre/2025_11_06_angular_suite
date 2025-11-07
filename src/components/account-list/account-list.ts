@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { IAccount } from '../../interfaces/IAccount';
 import { AccountService } from '../../services/account/account-service';
 import { Router, RouterLink } from "@angular/router";
+import { ShareAccountsService } from '../../services/shareAccountsData/share-accounts-service';
 
 @Component({
   selector: 'app-account-list',
@@ -12,7 +13,13 @@ import { Router, RouterLink } from "@angular/router";
 export class AccountList {
   @Input({ required: true }) accounts!: IAccount[]
 
-  constructor(private service: AccountService, private router: Router) { }
+  @Input() displayUpdateButton: boolean = false
+
+  constructor(
+    private service: AccountService,
+    private router: Router,
+    private shareService: ShareAccountsService
+  ) { }
 
   handleDelete(accountId?: string): void {
     if (accountId)
@@ -26,6 +33,11 @@ export class AccountList {
   handleRedirectDetails(id?: string): void {
     if (id)
       this.router.navigate(['/comptes-bancaire', id])
+  }
+
+  handleUpdate(account: IAccount): void {
+    this.shareService.shareAccount(account)
+    this.router.navigate(['/comptes-bancaire', 'modifier'])
   }
 
 }

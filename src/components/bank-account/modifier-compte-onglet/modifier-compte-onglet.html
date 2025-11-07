@@ -1,1 +1,11 @@
-<p>modifier-compte-onglet works!</p>
+<section>
+
+
+  @if(account && account.id){
+  <app-update-account [accountToUpdate]="account" />
+  } @else {
+  <p> Veuillez choisir un compte à modifier en cliquant sur un des boutons modifier du tableau ci-dessus</p>
+  }
+
+
+</section>

@@ -2,6 +2,10 @@
 
   <h1>Nos comptes bancaires</h1>
 
+  @if(accounts){
+  <app-account-list [accounts]="accounts" [displayUpdateButton]="true" />
+  }
+
   <ul class="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
     <li><a [routerLink]="['ajouter']" routerLinkActive="menu-active">Ajouter</a></li>
     <li><a [routerLink]="['modifier']" routerLinkActive="menu-active">Modifier</a></li>

@@ -9,7 +9,6 @@
     <span class="text-error">{{accountNumberError}}</span>
     }
 
-
     <label class="label">Type de compte</label>
     <select formControlName="accountType" class="input">
       <option disabled selected>Type de compte</option>
@@ -18,27 +17,12 @@
     </select>
     <span class="text-error">{{accountTypeError}}</span>
 
-
-
-
-
-
     <label class="label">Solde</label>
     <input type="number" class="input" formControlName="solde" />
     @if(soldeNumberError){
     <span class="text-error">{{soldeNumberError}}</span>
     }
 
-
-    <button type="submit" class="btn btn-neutral mt-4">Ajouter</button>
+    <button type="submit" class="btn btn-warning mt-4">Modifier</button>
   </fieldset>
 </form>
-
-
-
-<!--
- <input type="text" class="input" formControlName="accountType" />
-    @if(accountTypeError){
-    <span class="text-error">{{accountTypeError}}</span>
-    }
--->

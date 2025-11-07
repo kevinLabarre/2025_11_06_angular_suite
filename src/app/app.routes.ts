@@ -7,6 +7,7 @@ import { NewsPage } from '../pages/news-page/news-page';
 import { AjouterCompteOnglet } from '../components/bank-account/ajouter-compte-onglet/ajouter-compte-onglet';
 import { ModifierCompteOnglet } from '../components/bank-account/modifier-compte-onglet/modifier-compte-onglet';
 import { DetailsCompteOnglet } from '../components/bank-account/details-compte-onglet/details-compte-onglet';
+import { Signals } from '../pages/signals/signals';
 
 export const routes: Routes = [
   { path: "", component: HomePage, title: "Accueil" },
@@ -26,6 +27,7 @@ export const routes: Routes = [
   },
   { path: "comptes-bancaire/:id", component: AccountDetailPage, title: "Détails du compte" },
   { path: "actualites", component: NewsPage, title: "Nos actualités" },
+  { path: "signaux", component: Signals, title: "Les signaux: démo" },
 
   { path: "**", component: NotFoundPage, title: "404" }
 ];

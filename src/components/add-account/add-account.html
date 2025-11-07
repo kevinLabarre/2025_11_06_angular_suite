@@ -1,0 +1,37 @@
+<form [formGroup]="accountForm" (ngSubmit)="handleSubmit()">
+  <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+    <legend class="fieldset-legend">Login</legend>
+
+    <label class="label">N° de compte</label>
+    <input type="text" class="input" formControlName="accountNumber" />
+
+    @if(accountNumberError){
+    <span class="text-error">{{accountNumberError}}</span>
+    }
+
+    <label class="label">Type de compte</label>
+    <select formControlName="accountType" class="input">
+      <option disabled selected>Type de compte</option>
+      <option value="EPARGNE">Epargne</option>
+      <option value="COURANT">Courant</option>
+    </select>
+    <span class="text-error">{{accountTypeError}}</span>
+
+    <label class="label">Solde</label>
+    <input type="number" class="input" formControlName="solde" />
+    @if(soldeNumberError){
+    <span class="text-error">{{soldeNumberError}}</span>
+    }
+
+    <button type="submit" class="btn btn-neutral mt-4">Ajouter</button>
+  </fieldset>
+</form>
+
+
+
+<!--
+ <input type="text" class="input" formControlName="accountType" />
+    @if(accountTypeError){
+    <span class="text-error">{{accountTypeError}}</span>
+    }
+-->

@@ -1,12 +1,12 @@
 {
   "accounts": [
     {
-      "id": "1",
       "userId": 1,
       "accountNumber": "FR7630001007941234567890185",
-      "accountType": "EPARGNE",
-      "solde": 1200,
-      "lastTransactionDate": "2023-04-15T14:32:15.000Z"
+      "accountType": "COURANT",
+      "solde": 0,
+      "lastTransactionDate": "2023-04-15T14:32:15.000Z",
+      "id": "1"
     },
     {
       "id": "2",
@@ -57,62 +57,18 @@
       "lastTransactionDate": "2023-05-05T09:23:47.000Z"
     },
     {
-      "id": "8",
-      "userId": 7,
       "accountNumber": "FR7611808009101234567890177",
       "accountType": "EPARGNE",
-      "solde": 7840.25,
+      "solde": 7840.5,
+      "id": "8",
       "lastTransactionDate": "2023-04-25T14:15:32.000Z"
     },
     {
-      "id": "9",
-      "userId": 7,
-      "solde": 4500,
       "accountNumber": "FR7611808009101234567890178",
       "accountType": "COURANT",
+      "solde": 400,
+      "id": "9",
       "lastTransactionDate": "2023-05-01T10:42:18.000Z"
-    },
-    {
-      "id": "ac29",
-      "accountNumber": "FR7611808009101234567890179",
-      "accountType": "COURANT",
-      "solde": 153,
-      "lastTransactionDate": "2025-11-06T08:53:19.358Z"
-    },
-    {
-      "id": "f8e7",
-      "accountNumber": "FR156151",
-      "accountType": "EPARGNE",
-      "solde": 150,
-      "lastTransactionDate": "2025-11-06T09:43:50.834Z"
-    },
-    {
-      "id": "17f4",
-      "accountNumber": "Test",
-      "accountType": "EPARGNE",
-      "solde": 15000,
-      "lastTransactionDate": "2025-11-06T09:44:55.581Z"
-    },
-    {
-      "id": "c7b8",
-      "accountNumber": "FR156156181865156",
-      "accountType": "EPARGNE",
-      "solde": 15000,
-      "lastTransactionDate": "2025-11-06T09:45:09.440Z"
-    },
-    {
-      "id": "8867",
-      "accountNumber": "FR156156181865156",
-      "accountType": "EPARGNE",
-      "solde": 15000,
-      "lastTransactionDate": "2025-11-06T09:45:14.452Z"
-    },
-    {
-      "id": "a692",
-      "accountNumber": "T",
-      "accountType": "EPARGNE",
-      "solde": 23,
-      "lastTransactionDate": "2025-11-06T13:02:30.254Z"
     }
   ],
   "actualites": [
